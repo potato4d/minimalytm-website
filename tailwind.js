@@ -1,18 +1,3 @@
-/*
-
-Tailwind - The Utility-First CSS Framework
-
-A project by Adam Wathan (@adamwathan), Jonathan Reinink (@reinink),
-David Hemphill (@davidhemphill) and Steve Schoger (@steveschoger).
-
-Welcome to the Tailwind config file. This is where you can customize
-Tailwind specifically for your project. Don't be intimidated by the
-length of this file. It's really just a big JavaScript object and
-we've done our very best to explain each section.
-
-View the full documentation at https://tailwindcss.com.
-*/
-
 // let defaultConfig = require('tailwindcss/defaultConfig')()
 
 let colors = {
@@ -27,31 +12,65 @@ let colors = {
   'grey-lighter': '#f1f5f8',
   'grey-lightest': '#f8fafc',
   'white': '#ffffff',
-
-  'red-darkest': '#3b0d0c',
-  'red-darker': '#621b18',
-  'red-dark': '#cc1f1a',
   'red': '#F30206',
-  'red-light': '#ef5753',
-  'red-lighter': '#f9acaa',
-  'red-lightest': '#fcebea',
-
-  'orange-darkest': '#462a16',
-  'orange-darker': '#613b1f',
-  'orange-dark': '#de751f',
-  'orange': '#f6993f',
-  'orange-light': '#faad63',
-  'orange-lighter': '#fcd9b6',
-  'orange-lightest': '#fff5eb',
 }
+
+const createSize = (dir) => ({
+  'auto': 'auto',
+  'px': '1px',
+  '1': '0.25rem',
+  '2': '0.5rem',
+  '3': '0.75rem',
+  '4': '1rem',
+  '5': '1.25rem',
+  '6': '1.5rem',
+  '8': '2rem',
+  '10': '2.5rem',
+  '12': '3rem',
+  '16': '4rem',
+  '24': '6rem',
+  '32': '8rem',
+  '48': '12rem',
+  '64': '16rem',
+  '1/2': '50%',
+  '1/3': '33.33333%',
+  '2/3': '66.66667%',
+  '1/4': '25%',
+  '3/4': '75%',
+  '1/5': '20%',
+  '2/5': '40%',
+  '3/5': '60%',
+  '4/5': '80%',
+  '1/6': '16.66667%',
+  '5/6': '83.33333%',
+  'full': '100%',
+  'screen': '100v' + dir
+})
+
+const createSpacing = () => ({
+  'px': '1px',
+  '0': '0',
+  '1': '0.25rem',
+  '2': '0.5rem',
+  '3': '0.75rem',
+  '4': '1rem',
+  '5': '1.25rem',
+  '6': '1.5rem',
+  '8': '50px',
+  '10': '2.5rem',
+  '12': '3rem',
+  '16': '4rem',
+  '20': '5rem',
+  '24': '6rem',
+  '32': '8rem',
+})
 
 module.exports = {
   colors: colors,
   screens: {
     'sm': '576px',
     'md': '768px',
-    'lg': '992px',
-    'xl': '1200px',
+    'lg': '992px'
   },
   fonts: {
     'sans': [
@@ -127,62 +146,11 @@ module.exports = {
   borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
   borderRadius: {
     'none': '0',
-    'sm': '.125rem',
     default: '.25rem',
-    'lg': '.5rem',
     'full': '9999px',
   },
-  width: {
-    'auto': 'auto',
-    'px': '1px',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '24': '6rem',
-    '32': '8rem',
-    '48': '12rem',
-    '64': '16rem',
-    '1/2': '50%',
-    '1/3': '33.33333%',
-    '2/3': '66.66667%',
-    '1/4': '25%',
-    '3/4': '75%',
-    '1/5': '20%',
-    '2/5': '40%',
-    '3/5': '60%',
-    '4/5': '80%',
-    '1/6': '16.66667%',
-    '5/6': '83.33333%',
-    'full': '100%',
-    'screen': '100vw'
-  },
-  height: {
-    'auto': 'auto',
-    'px': '1px',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '24': '6rem',
-    '32': '8rem',
-    '48': '12rem',
-    '64': '16rem',
-    'full': '100%',
-    'screen': '100vh'
-  },
+  width: { ...createSize('w') },
+  height: { ...createSize('h') },
   minWidth: {
     '0': '0',
     'full': '100%',
@@ -208,40 +176,10 @@ module.exports = {
     'full': '100%',
     'screen': '100vh',
   },
-  padding: {
-    'px': '1px',
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '50px',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '20': '5rem',
-    '24': '6rem',
-    '32': '8rem',
-  },
+  padding: { ...createSpacing() },
   margin: {
     'auto': 'auto',
-    'px': '1px',
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '50px',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '20': '5rem',
-    '24': '6rem',
-    '32': '8rem',
+    ...createSpacing()
   },
   negativeMargin: {},
   shadows: {
@@ -263,12 +201,6 @@ module.exports = {
     '75': '.75',
     '100': '1',
   },
-  svgFill: {
-    'current': 'currentColor',
-  },
-  svgStroke: {
-    'current': 'currentColor',
-  },
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: ['responsive'],
@@ -278,7 +210,7 @@ module.exports = {
     backgroundSize: ['responsive'],
     borderCollapse: [],
     borderColors: ['responsive', 'hover', 'focus'],
-    borderRadius: ['responsive'],
+    borderRadius: [],
     borderStyle: ['responsive'],
     borderWidths: ['responsive'],
     cursor: ['responsive'],
@@ -295,26 +227,26 @@ module.exports = {
     maxWidth: ['responsive'],
     minHeight: ['responsive'],
     minWidth: ['responsive'],
-    negativeMargin: ['responsive'],
+    negativeMargin: [],
     opacity: ['responsive'],
     outline: ['focus'],
     overflow: ['responsive'],
     padding: ['responsive'],
-    pointerEvents: ['responsive'],
+    pointerEvents: [],
     position: ['responsive'],
     resize: ['responsive'],
-    shadows: ['responsive', 'hover', 'focus'],
+    shadows: ['hover', 'focus'],
     svgFill: [],
     svgStroke: [],
     textAlign: ['responsive'],
     textColors: ['responsive', 'hover', 'focus'],
     textSizes: ['responsive'],
     textStyle: ['responsive', 'hover', 'focus'],
-    tracking: ['responsive'],
-    userSelect: ['responsive'],
-    verticalAlign: ['responsive'],
-    visibility: ['responsive'],
-    whitespace: ['responsive'],
+    tracking: [],
+    userSelect: [],
+    verticalAlign: [],
+    visibility: [],
+    whitespace: [],
     width: ['responsive'],
     zIndex: ['responsive'],
   },

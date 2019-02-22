@@ -1,6 +1,19 @@
 <template>
   <div id="__content">
-    <nuxt/>
+    <div class="text-center flex flex-col items-center w-screen h-screen first-view">
+      <img src="~/assets/icon.png" width="96" alt="">
+      <h1 class="pt-2 pb-2">
+        minimalytm
+      </h1>
+      <div class="w-32 border-red border-b-4 inline-block"></div>
+      <img src="~/assets/preview.png" class="mt-12 shadow" width="720" alt="">
+      <div>
+        <button type="button" class="mt-8 mb-8 w-48 text-sm h-12 border border-white text-white inline-flex justify-center items-center">
+          Download macOS dmg
+        </button>
+      </div>
+    </div>
+    <nuxt id="__nuxt-content" />
   </div>
 </template>
 
@@ -27,16 +40,22 @@ html {
 html,
 body,
 #__nuxt,
-#__layout {
+#__layout,
+#__content {
   width: 100vw;
   min-height: 100vh;
   color: #fff;
   background: #111;
 }
 
-#__content {
+#__nuxt-content {
   max-width: 750px;
-  padding: 50px 15px;
+  padding: 0 15px 50px;
   margin: 0 auto;
+}
+
+.first-view {
+  padding-top: 50px;
+  background: linear-gradient(#222, #111);
 }
 </style>

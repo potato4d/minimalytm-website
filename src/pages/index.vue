@@ -1,18 +1,5 @@
 <template>
   <div class="container">
-    <div class="text-center flex flex-col items-center">
-      <img src="~/assets/icon.png" width="96" alt="">
-      <h1 class="pt-2 pb-2">
-        minimalytm
-      </h1>
-      <div class="w-32 border-red border-b-4 inline-block"></div>
-      <img src="~/assets/preview.png" class="mt-12 shadow" width="720" alt="">
-      <div>
-        <button type="button" class="mt-8 mb-8 w-48 text-sm h-12 border border-white text-white inline-flex justify-center items-center">
-          Download macOS dmg
-        </button>
-      </div>
-    </div>
     <section class="pb-8">
       <h1 class="text-xl pb-6">What is this?</h1>
       <p class="leading-loose">
@@ -123,7 +110,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;

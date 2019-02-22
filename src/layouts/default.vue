@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="__content">
     <nuxt/>
   </div>
 </template>
@@ -24,32 +24,19 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
+html,
+body,
+#__nuxt,
+#__layout {
+  width: 100vw;
+  min-height: 100vh;
   color: #fff;
-  background-color: #3b8070;
+  background: #111;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+#__content {
+  max-width: 750px;
+  padding: 50px 15px;
+  margin: 0 auto;
 }
 </style>

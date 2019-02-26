@@ -13,7 +13,7 @@
         - Access to the YouTube Music in your machine's toolbar<br>
         - Multi Display support<br>
         - macOS Mojave Dark Mode Support<br>
-        - macOS Hotkey (F8) and Touch Bar play/pause control support
+        - macOS Hotkey (F7, F8, F9) and Touch Bar control support
       </p>
     </section>
     <section class="pb-8">
@@ -101,13 +101,7 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
+export default {}
 </script>
 
 <style scoped>

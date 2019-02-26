@@ -46,6 +46,7 @@ body,
   min-height: 100vh;
   color: #fff;
   background: #111;
+  overflow-x: hidden;
 }
 
 #__nuxt-content {
@@ -56,6 +57,7 @@ body,
 
 .first-view {
   padding-top: 50px;
+  min-height: 720px;
   background: linear-gradient(#222, #111);
 }
 </style>

@@ -2,7 +2,6 @@
 
 let colors = {
   'transparent': 'transparent',
-
   'black': '#22292f',
   'grey-darkest': '#3d4852',
   'grey-darker': '#606f7b',
@@ -48,6 +47,7 @@ const createSize = (dir) => ({
 })
 
 const createSpacing = () => ({
+  'auto': 'auto',
   'px': '1px',
   '0': '0',
   '1': '0.25rem',
@@ -65,36 +65,17 @@ const createSpacing = () => ({
   '32': '8rem',
 })
 
+const ignoreProperties = ['leading', 'textAlign', 'opacity', 'appearance', 'cursor', 'float', 'overflow', 'outline', 'resize', 'flexbox', 'borderStyle', 'pointerEvents', 'borderRadius', 'negativeMargin', 'lists', 'backgroundAttachment', 'backgroundPosition', 'backgroundRepeat', 'backgroundSize', 'borderCollapse', 'svgFill', 'svgStroke', 'tracking', 'userSelect', 'verticalAlign', 'visibility', 'whitespace', 'zIndex'].reduce((b, a) => ({...b, [a]: []}), {})
+
 module.exports = {
   colors: colors,
   screens: {
     'sm': '576px',
-    'md': '768px',
-    'lg': '992px'
+    'md': '768px'
   },
   fonts: {
-    'sans': [
-      'system-ui',
-      'BlinkMacSystemFont',
-      '-apple-system',
-      'Segoe UI',
-      'Roboto',
-      'Oxygen',
-      'Ubuntu',
-      'Cantarell',
-      'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue',
-      'sans-serif',
-    ],
-    'mono': [
-      'Menlo',
-      'Monaco',
-      'Consolas',
-      'Liberation Mono',
-      'Courier New',
-      'monospace',
-    ]
+    'sans': [ 'system-ui', 'BlinkMacSystemFont', '-apple-system', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif' ],
+    'mono': [ 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace' ]
   },
   textSizes: {
     'xs': '.75rem',     // 12px
@@ -162,13 +143,7 @@ module.exports = {
   },
   maxWidth: {
     'xs': '20rem',
-    'sm': '30rem',
-    'md': '40rem',
     'lg': '50rem',
-    'xl': '60rem',
-    '2xl': '70rem',
-    '3xl': '80rem',
-    '4xl': '90rem',
     '5xl': '100rem',
     'full': '100%',
   },
@@ -177,14 +152,10 @@ module.exports = {
     'screen': '100vh',
   },
   padding: { ...createSpacing() },
-  margin: {
-    'auto': 'auto',
-    ...createSpacing()
-  },
+  margin: { ...createSpacing() },
   negativeMargin: {},
   shadows: {
     default: '0 2px 4px 0 rgba(0,0,0,0.10)',
-    'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
     'outline': '0 0 0 3px rgba(52,144,220,0.5)',
     'none': 'none',
@@ -202,53 +173,26 @@ module.exports = {
     '100': '1',
   },
   modules: {
-    appearance: ['responsive'],
-    backgroundAttachment: ['responsive'],
-    backgroundColors: ['responsive', 'hover', 'focus'],
-    backgroundPosition: ['responsive'],
-    backgroundRepeat: ['responsive'],
-    backgroundSize: ['responsive'],
-    borderCollapse: [],
+    backgroundColors: ['hover', 'focus'],
     borderColors: ['responsive', 'hover', 'focus'],
-    borderRadius: [],
-    borderStyle: ['responsive'],
     borderWidths: ['responsive'],
-    cursor: ['responsive'],
     display: ['responsive'],
-    flexbox: ['responsive'],
-    float: ['responsive'],
     fonts: ['responsive'],
     fontWeights: ['responsive', 'hover', 'focus'],
     height: ['responsive'],
-    leading: ['responsive'],
-    lists: ['responsive'],
     margin: ['responsive'],
     maxHeight: ['responsive'],
     maxWidth: ['responsive'],
     minHeight: ['responsive'],
     minWidth: ['responsive'],
-    negativeMargin: [],
-    opacity: ['responsive'],
-    outline: ['focus'],
-    overflow: ['responsive'],
     padding: ['responsive'],
-    pointerEvents: [],
     position: ['responsive'],
-    resize: ['responsive'],
     shadows: ['hover', 'focus'],
-    svgFill: [],
-    svgStroke: [],
-    textAlign: ['responsive'],
     textColors: ['responsive', 'hover', 'focus'],
     textSizes: ['responsive'],
     textStyle: ['responsive', 'hover', 'focus'],
-    tracking: [],
-    userSelect: [],
-    verticalAlign: [],
-    visibility: [],
-    whitespace: [],
     width: ['responsive'],
-    zIndex: ['responsive'],
+    ...ignoreProperties
   },
   plugins: [
     require('tailwindcss/plugins/container')({}),

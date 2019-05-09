@@ -73,9 +73,15 @@
         </p>
       </div>
     </section>
+    <section class="pb-8">
+      <h1 class="text-xl pb-6">Special thanks</h1>
+      <p class="leading-loose">
+        - <a href="http://github.com/himanoa" class="text-white">himanoa</a>
+      </p>
+    </section>
     <footer class="pb-8">
       <p class="leading-loose text-xs font-bold text-center">
-        &copy; 2019 potato4d and himanoa
+        &copy; 2019 potato4d
       </p>
     </footer>
   </div>

@@ -17,45 +17,26 @@
       </p>
     </section>
     <section class="pb-8">
-      <h1 class="text-xl pb-6">Screen shots</h1>
-      <div class="flex justify-between items-stretch">
-        <img src="https://placehold.it/230x140" alt="">
-        <img src="https://placehold.it/230x140" alt="">
-        <img src="https://placehold.it/230x140" alt="">
-      </div>
-    </section>
-    <section class="pb-8">
-      <h1 class="text-xl pb-6">Creators</h1>
+      <h1 class="text-xl pb-6">Creator</h1>
       <div class="flex justify-between items-stretch">
         <div class="flex-1 flex flex-col items-center justify-center">
-          <img src="https://potato4d.me/real.png" width="64" height="64" class="border-2 border-white rounded-full" alt="">
+          <img src="https://github.com/potato4d.png" width="96" height="96" class="border border-white rounded-full" alt="">
           <span class="font-bold inline-block text-lg mt-3">potato4d</span>
-          <small class="inline-block mt-1 mb-1 leading-loose">creator</small>
-          <ul class="list-reset flex mt-2">
+          <ul class="list-reset flex mt-4">
             <li>
-              <img src="https://placehold.it/44x44" width="22" alt="">
+              <a class="text-white" href="https://twitter.com/potato4d" target="_blank">
+                <i class="fa fa-fw fa-twitter"></i>
+              </a>
             </li>
             <li class="ml-2 mr-2">
-              <img src="https://placehold.it/44x44" width="22" alt="">
+              <a class="text-white" href="https://github.com/potato4d" target="_blank">
+                <i class="fa fa-fw fa-github"></i>
+              </a>
             </li>
             <li>
-              <img src="https://placehold.it/44x44" width="22" alt="">
-            </li>
-          </ul>
-        </div>
-        <div class="flex-1 flex flex-col items-center justify-center">
-          <img src="https://github.com/himanoa.png" width="64" height="64" class="border-2 border-white rounded-full" alt="">
-          <span class="font-bold inline-block text-lg mt-3">himanoa</span>
-          <small class="inline-block mt-1 mb-1 leading-loose">co-creator</small>
-          <ul class="list-reset flex mt-2">
-            <li>
-              <img src="https://placehold.it/44x44" width="22" alt="">
-            </li>
-            <li class="ml-2 mr-2">
-              <img src="https://placehold.it/44x44" width="22" alt="">
-            </li>
-            <li>
-              <img src="https://placehold.it/44x44" width="22" alt="">
+              <a class="text-white" href="https://potato4d.me" target="_blank">
+                <i class="fa fa-fw fa-home"></i>
+              </a>
             </li>
           </ul>
         </div>

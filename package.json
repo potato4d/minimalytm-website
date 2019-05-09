@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.6.0",
     "vue-feather-icons": "^4.10.0"
   },
   "devDependencies": {

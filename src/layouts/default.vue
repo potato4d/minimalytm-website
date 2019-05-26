@@ -1,6 +1,6 @@
 <template>
   <div id="__content">
-    <div class="text-center flex flex-col items-center w-screen h-screen first-view">
+    <div class="text-center flex flex-col items-center w-screen h-screen first-view" style="min-height: 860px;">
       <img src="~/assets/icon.png" width="96" alt="">
       <h1 class="pt-2 pb-2">
         minimalytm

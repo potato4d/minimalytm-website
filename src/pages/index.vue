@@ -90,9 +90,13 @@
   </div>
 </template>
 
-<script>
-export default {}
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+
+})
 </script>
+
 
 <style scoped>
 /* Sample `apply` at-rules with Tailwind CSS

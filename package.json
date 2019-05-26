@@ -11,10 +11,12 @@
     "format": "prettier './src/**/*.{js,vue}' --write"
   },
   "dependencies": {
+    "@nuxt/typescript": "^2.7.1",
     "@nuxtjs/google-analytics": "^2.2.0",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.6.0",
+    "nuxt": "^2.7.1",
     "nuxt-device-detect": "^1.1.5",
+    "ts-node": "^8.2.0",
     "vue-feather-icons": "^4.10.0"
   },
   "devDependencies": {

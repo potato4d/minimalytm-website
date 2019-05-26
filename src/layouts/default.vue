@@ -21,15 +21,15 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
   data() {
     return {
       url: ''
     }
   },
   mounted() {
-    console.log(this)
     if (this.$device.isWindows) {
       this.url =
         'https://s3-ap-northeast-1.amazonaws.com/minimalytm-binaries/Minimal+YouTube+Music+Player+0.3.2.exe'
@@ -39,7 +39,7 @@ export default {
         'https://s3-ap-northeast-1.amazonaws.com/minimalytm-binaries/Minimal+YouTube+Music+Player-0.3.2.dmg'
     }
   }
-}
+})
 </script>
 
 

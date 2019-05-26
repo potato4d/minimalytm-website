@@ -1,7 +1,5 @@
 # minimalytm website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a6821142-78be-478e-b216-c7b7644cc65b/deploy-status)](https://app.netlify.com/sites/minimalytm/deploys)
-
 https://minimalytm.app
 
 ## What is this?

@@ -8,14 +8,40 @@
       <div class="w-32 border-red border-b-4 inline-block"></div>
       <img src="~/assets/preview.png" class="mt-12 shadow" width="720" alt="">
       <div>
-        <button type="button" class="mt-8 mb-8 w-48 text-sm h-12 border border-white text-white inline-flex justify-center items-center download-button">
-          Download macOS dmg
-        </button>
+        <no-ssr>
+          <a :href="url" target="_blank" class="no-underline mt-8 mb-8 w-48 text-sm h-12 border border-white text-white inline-flex justify-center items-center download-button">
+            <span>Download</span>
+            <span v-if="$device.isMacOS">&nbsp;for macOS</span>
+            <span v-if="$device.isWindows">&nbsp;for Windows</span>
+          </a>
+        </no-ssr>
       </div>
     </div>
     <nuxt id="__nuxt-content" />
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      url: ''
+    }
+  },
+  mounted() {
+    console.log(this)
+    if (this.$device.isWindows) {
+      this.url =
+        'https://s3-ap-northeast-1.amazonaws.com/minimalytm-binaries/Minimal+YouTube+Music+Player+0.3.2.exe'
+    }
+    if (this.$device.isMacOS) {
+      this.url =
+        'https://s3-ap-northeast-1.amazonaws.com/minimalytm-binaries/Minimal+YouTube+Music+Player-0.3.2.dmg'
+    }
+  }
+}
+</script>
+
 
 <style>
 html {

@@ -42,6 +42,10 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    'nuxt-device-detect',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-135633858-3'
+    }]
   ],
 
   /*

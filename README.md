@@ -1,6 +1,6 @@
 # minimalytm website
 
-https://minimalytm.app
+https://www.minimalytm.app
 
 ## What is this?
 

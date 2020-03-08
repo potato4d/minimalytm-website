@@ -1,2 +1,4 @@
 [[redirects]]
-http://minimalytm.netlify.com/* http://minimalytm.app/:splat 301!
+  from = "http://minimalytm.netlify.com/*"
+  to = "http://minimalytm.app/:splat"
+  status = 301

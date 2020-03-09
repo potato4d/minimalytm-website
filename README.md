@@ -5,7 +5,7 @@ https://www.minimalytm.app
 ## What is this?
 
 minimalytm is minimal cross-platform YouTube Music Player for Desktop.
-On your macOS, Windows, Linux toolbar and you can easily and fastly access YouTube Music.
+On your macOS and Windows toolbar and you can easily and fastly access YouTube Music.
 
 ## Supported Features
 

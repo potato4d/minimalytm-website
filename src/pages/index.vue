@@ -4,7 +4,7 @@
       <h1 class="text-xl pb-6">What is this?</h1>
       <p class="leading-loose">
         minimalytm is minimal cross-platform YouTube Music Player for Desktop.<br>
-        On your macOS, Windows, Linux toolbar and you can easily and fastly access YouTube Music.
+        On your macOS and Windows toolbar and you can easily and fastly access YouTube Music.
       </p>
     </section>
     <section class="pb-8">
